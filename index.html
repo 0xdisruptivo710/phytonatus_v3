@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="page-light">
+<body class="page-light has-topbar">
 
   <!-- Cursor -->
   <div id="cursor" class="cursor"></div>
@@ -21,6 +21,31 @@
     <div class="preloader-stage">
       <img src="assets/images/Logos%20e%20Selos/logo-phytonatus-institucional.png" alt="Phytonatus" class="preloader-logo-img" />
       <div class="preloader-line"></div>
+    </div>
+  </div>
+
+  <!-- Top bar institucional (DNA Melbras — camada 1) -->
+  <div class="header-topbar" aria-label="Atalhos institucionais">
+    <div class="header-topbar-inner">
+      <div class="header-topbar-left">
+        <span class="header-topbar-sac"><strong>SAC</strong>(15) 3416-1170</span>
+        <span class="header-topbar-sep" aria-hidden="true"></span>
+        <a href="mailto:contato@phytonatus.com.br" aria-label="E-mail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          contato@phytonatus.com.br
+        </a>
+      </div>
+      <div class="header-topbar-right">
+        <a href="https://www.instagram.com/phytonatus/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/phytonatus/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="http://www.youtube.com/channel/UCMi3C9o_hySFlxIveNttSZA" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -37,6 +62,9 @@
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </nav>
+      <a href="https://loja.phytonatus.com.br/" target="_blank" rel="noopener" class="nav-shop-cta" aria-label="Loja Phytonatus">
+        Loja Online <span class="nav-shop-cta-arrow" aria-hidden="true">↗</span>
+      </a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -48,42 +76,86 @@
     <a href="marcas.html">Marcas</a>
     <a href="private-label.html">Private Label</a>
     <a href="contato.html">Contato</a>
+    <a href="https://loja.phytonatus.com.br/" target="_blank" rel="noopener" class="m-shop">Loja Online ↗</a>
   </nav>
 
-  <!-- ═══ HERO ═══════════════════════════════════════════════ -->
-  <section class="hero hero-top-aligned" aria-label="Apresentação" style="background-image:url('assets/images/Gemini_Generated_Image_4jajwf4jajwf4jaj.png');background-size:cover;background-position:center;">
-    <div class="hero-content" style="max-width:1200px;text-align:left;margin-left:0;margin-right:auto;">
-      <p style="color:var(--c-cream);font-family:var(--f-title);font-size:clamp(3rem,6.5vw,5.8rem);max-width:1100px;line-height:1.1;font-weight:600;text-align:left;margin-bottom:2.5rem;letter-spacing:-0.01em;">
-        Mel puro, temperos naturais, mercearia saudável.
-      </p>
+  <!-- ═══ HERO TYPE-AS-PROTAGONIST + VIDEO BG ════════════════ -->
+  <section class="hero-protagonist hero-with-video" aria-label="Apresentação" data-indicator="Início">
 
-      <h1 class="hero-title hero-title-xl" style="text-align:left;">
-        <span class="reveal"><span class="reveal-inner">Da Natureza</span></span>
-        <span class="reveal"><span class="reveal-inner">para a sua vida</span></span>
-      </h1>
+    <!-- Video institucional como background full-bleed -->
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+      <source src="assets/images/hero-institucional.mp4" type="video/mp4" />
+    </video>
+
+    <div class="hero-mesh-bg" aria-hidden="true">
+      <span class="orb orb-3"></span>
+      <span class="orb orb-4"></span>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-type">
+        <p class="hero-eyebrow">Phytonatus · 1999 — 2026</p>
+        <h1 class="hero-display" aria-label="Da Natureza para a sua vida">
+          <span class="line"><span class="line-inner">Da</span></span>
+          <span class="line"><span class="line-inner"><em class="accent">Natureza</em></span></span>
+          <span class="line"><span class="line-inner">para a sua</span></span>
+          <span class="line"><span class="line-inner"><span class="underline">vida.</span></span></span>
+        </h1>
+      </div>
+
+      <div class="hero-aside">
+        <div class="hero-plate-meta">
+          <span>Sorocaba · SP · Brasil</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-bottom-line" aria-hidden="true">
+      <span>Mel puro</span>
+      <span>Temperos naturais</span>
+      <span>Mercearia saudável</span>
     </div>
   </section>
 
-  <div class="wave-divider wave-up" aria-hidden="true">
-    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,80 L0,80 Z" fill="var(--c-cream-2)"/>
-    </svg>
-  </div>
-
-  <!-- ═══ FAIXA "26 ANOS" (abaixo da imagem) ═══════════════════ -->
-  <div style="background:var(--c-cream-2);border-bottom:1px solid var(--c-border-l);">
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:clamp(1.5rem,2.8vw,2.25rem);">
-      <p style="font-size:clamp(1.1rem,1.6vw,1.5rem);letter-spacing:0.22em;text-transform:uppercase;color:var(--c-muted-l);font-family:var(--f-title);font-weight:700;">
-        PHYTONATUS
-      </p>
-      <p style="font-size:clamp(1.1rem,1.6vw,1.5rem);color:var(--c-dark);font-family:var(--f-title);font-weight:600;letter-spacing:0.04em;">
-        Desde 1999
-      </p>
+  <!-- Marquee strip institucional (DNA Melbras + dinamismo) -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Phytonatus · Desde 1999 · Mel puro · Temperos naturais · Mercearia saudável · 26 anos no mercado · Padrões internacionais</span>
+      <span>Phytonatus · Desde 1999 · Mel puro · Temperos naturais · Mercearia saudável · 26 anos no mercado · Padrões internacionais</span>
+      <span>Phytonatus · Desde 1999 · Mel puro · Temperos naturais · Mercearia saudável · 26 anos no mercado · Padrões internacionais</span>
+      <span>Phytonatus · Desde 1999 · Mel puro · Temperos naturais · Mercearia saudável · 26 anos no mercado · Padrões internacionais</span>
     </div>
   </div>
 
+  <!-- ═══ YEAR THEATRE — 1999—2026 como protagonista de seção ═══════════════ -->
+  <section class="year-theatre" data-indicator="1999—2026">
+    <div class="year-theatre-bg" aria-hidden="true">
+      <span class="bg-num">1999—2026</span>
+    </div>
+    <div class="year-theatre-content">
+      <p class="eyebrow">Vinte e seis anos</p>
+      <h2>Construindo padrão internacional <em>em produtos naturais</em>, com <em>ingredientes puros</em> e processos transparentes.</h2>
+      <div class="year-theatre-stats">
+        <div class="year-theatre-stat">
+          <span class="v" data-count="26" data-suffix="">0</span>
+          <span class="l">Anos de mercado</span>
+        </div>
+        <div class="year-theatre-stat">
+          <span class="v">04</span>
+          <span class="l">Marcas no portfólio</span>
+        </div>
+        <div class="year-theatre-stat">
+          <span class="v" data-count="80" data-suffix="t">0</span>
+          <span class="l">Capacidade diária</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- (Bloco phyto-narrative removido — Year Theatre absorve o papel institucional) -->
+
   <!-- ═══ NOSSAS MARCAS ═══════════════════════════════════ -->
-  <section style="background:var(--c-cream);">
+  <section style="background:var(--c-cream);" data-indicator="Marcas">
     <div class="container s-pad-sm">
       <div
         style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:clamp(2rem,3vw,3rem);flex-wrap:wrap;gap:1rem;">
@@ -93,7 +165,7 @@
             Escolhas que fazem a diferença.
           </p>
         </div>
-        <a href="marcas.html" class="btn btn-dark fade-in">Ver portfólio completo <span class="btn-arrow">→</span></a>
+        <a href="marcas.html" class="btn btn-dark fade-in magnetic">Ver portfólio completo <span class="btn-arrow">→</span></a>
       </div>
     </div>
 
@@ -165,7 +237,7 @@
             Valorizamos ingredientes puros e selecionados para oferecer produtos naturais que levam saúde para sua mesa.
           </p>
           <div style="display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;">
-            <a href="marcas.html" class="btn btn-solid-accent fade-in">Conhecer as marcas <span class="btn-arrow">→</span></a>
+            <a href="marcas.html" class="btn btn-solid-accent fade-in magnetic">Conhecer as marcas <span class="btn-arrow">→</span></a>
           </div>
         </div>
       </div>
@@ -173,7 +245,7 @@
   </section>
 
   <!-- ═══ PRIVATE LABEL TEASER ════════════════════════════ -->
-  <section class="pl-teaser-light s-pad" style="position:relative;background-image:url('assets/images/transparent-plastic-bottles-filled-with-yellow-substance.jpg');background-size:cover;background-position:center;background-attachment:fixed;">
+  <section class="pl-teaser-light s-pad" data-indicator="Private Label" style="position:relative;background-image:url('assets/images/transparent-plastic-bottles-filled-with-yellow-substance.jpg');background-size:cover;background-position:center;background-attachment:fixed;">
     <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.35) 100%);z-index:1;"></div>
     <div class="container" style="position:relative;z-index:2;">
       <div class="pl-teaser-inner">
@@ -184,7 +256,7 @@
           <p class="body-lead fade-in" style="max-width:380px;color:var(--c-cream);">
             Conte com uma infraestrutura completa para a criação e produção de marcas próprias de produtos naturais, com qualidade, experiência e suporte em todas as etapas do processo.
           </p>
-          <a href="private-label.html" class="btn btn-solid-accent fade-in">Descubra <span
+          <a href="private-label.html" class="btn btn-solid-accent fade-in magnetic">Descubra <span
               class="btn-arrow">→</span></a>
         </div>
       </div>
@@ -204,79 +276,99 @@
     </div>
     <div class="ticker-track-wrapper" aria-hidden="true">
       <div class="ticker-track">
-        <span class="ticker-item"><img src="assets/images/parceiros/Sonda_Supermercados.png" alt="Sonda Supermercados" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/tauste.png" alt="Tauste" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/14018561-logotipo-da-amazon-em-fundo-transparente-gratis-vetor.jpg" alt="Amazon" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/15844843305e714feab8e1d_1584484330_1x1_md.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/242601252_3051119325134135_7160187457788174704_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/263586807_4579142008830955_1168917555044253958_n.png" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/305623858_580611640430590_4477314275217316423_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/306835573_484583910341893_8523438901820788334_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/310732353_474610728032843_3233199911219324923_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/324878134_1523164088173266_5163175629438623557_n.png" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/326178461_906836037168796_6124327768012050520_n.png" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/326375715_869589590930399_8195396420396852036_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/326477118_728791348804430_4356545693105144880_n.png" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/327166489_718066689669759_3633540413867261524_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/340488920_8070836912942635_2267872206440028135_n.png" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/341022266_949975406336777_8681385805198516324_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/352381287_657700169737784_893474863129340412_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/414722244_741586251328464_7278228028009860976_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/466008712_972309054941108_7457385391173787009_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/485804735_1065096468985456_5473871669752430690_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/489911351_1100878162069455_4133634473450748695_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/548292802_1397428875717158_8686421080255722901_n.jpg" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/Capturar.PNG" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/dfdfsd.PNG" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/images.png" alt="Parceiro comercial" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/logo1.png" alt="Parceiro comercial" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_1.png" alt="Parceiro comercial 1" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_2.png" alt="Parceiro comercial 2" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_3.png" alt="Parceiro comercial 3" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_4.png" alt="Parceiro comercial 4" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_5.png" alt="Parceiro comercial 5" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_6.png" alt="Parceiro comercial 6" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_7.png" alt="Parceiro comercial 7" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_8.png" alt="Parceiro comercial 8" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_9.png" alt="Parceiro comercial 9" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_10.png" alt="Parceiro comercial 10" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_11.png" alt="Parceiro comercial 11" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_12.png" alt="Parceiro comercial 12" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_13.png" alt="Parceiro comercial 13" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_14.png" alt="Parceiro comercial 14" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_15.png" alt="Parceiro comercial 15" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_16.png" alt="Parceiro comercial 16" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_17.png" alt="Parceiro comercial 17" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_18.png" alt="Parceiro comercial 18" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_19.png" alt="Parceiro comercial 19" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_20.png" alt="Parceiro comercial 20" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_21.png" alt="Parceiro comercial 21" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_22.png" alt="Parceiro comercial 22" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_23.png" alt="Parceiro comercial 23" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_24.png" alt="Parceiro comercial 24" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_25.png" alt="Parceiro comercial 25" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_26.png" alt="Parceiro comercial 26" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_27.png" alt="Parceiro comercial 27" loading="lazy" /></span>
       </div>
       <div class="ticker-track" aria-hidden="true">
-        <span class="ticker-item"><img src="assets/images/parceiros/Sonda_Supermercados.png" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/tauste.png" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/14018561-logotipo-da-amazon-em-fundo-transparente-gratis-vetor.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/15844843305e714feab8e1d_1584484330_1x1_md.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/242601252_3051119325134135_7160187457788174704_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/263586807_4579142008830955_1168917555044253958_n.png" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/305623858_580611640430590_4477314275217316423_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/306835573_484583910341893_8523438901820788334_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/310732353_474610728032843_3233199911219324923_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/324878134_1523164088173266_5163175629438623557_n.png" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/326178461_906836037168796_6124327768012050520_n.png" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/326375715_869589590930399_8195396420396852036_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/326477118_728791348804430_4356545693105144880_n.png" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/327166489_718066689669759_3633540413867261524_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/340488920_8070836912942635_2267872206440028135_n.png" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/341022266_949975406336777_8681385805198516324_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/352381287_657700169737784_893474863129340412_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/414722244_741586251328464_7278228028009860976_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/466008712_972309054941108_7457385391173787009_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/485804735_1065096468985456_5473871669752430690_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/489911351_1100878162069455_4133634473450748695_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/548292802_1397428875717158_8686421080255722901_n.jpg" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/Capturar.PNG" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/dfdfsd.PNG" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/images.png" alt="" /></span>
-        <span class="ticker-item"><img src="assets/images/parceiros/logo1.png" alt="" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_1.png" alt="Parceiro comercial 1" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_2.png" alt="Parceiro comercial 2" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_3.png" alt="Parceiro comercial 3" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_4.png" alt="Parceiro comercial 4" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_5.png" alt="Parceiro comercial 5" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_6.png" alt="Parceiro comercial 6" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_7.png" alt="Parceiro comercial 7" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_8.png" alt="Parceiro comercial 8" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_9.png" alt="Parceiro comercial 9" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_10.png" alt="Parceiro comercial 10" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_11.png" alt="Parceiro comercial 11" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_12.png" alt="Parceiro comercial 12" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_13.png" alt="Parceiro comercial 13" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_14.png" alt="Parceiro comercial 14" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_15.png" alt="Parceiro comercial 15" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_16.png" alt="Parceiro comercial 16" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_17.png" alt="Parceiro comercial 17" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_18.png" alt="Parceiro comercial 18" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_19.png" alt="Parceiro comercial 19" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_20.png" alt="Parceiro comercial 20" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_21.png" alt="Parceiro comercial 21" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_22.png" alt="Parceiro comercial 22" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_23.png" alt="Parceiro comercial 23" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_24.png" alt="Parceiro comercial 24" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_25.png" alt="Parceiro comercial 25" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_26.png" alt="Parceiro comercial 26" loading="lazy" /></span>
+        <span class="ticker-item"><img src="assets/images/logos_padronizados_final/logo_27.png" alt="Parceiro comercial 27" loading="lazy" /></span>
       </div>
     </div>
   </section>
 
   <!-- ═══ LOJAS ONLINE ════════════════════════════════════ -->
-  <section class="lojas-online-section" aria-label="Lojas Online" style="background:var(--c-cream-2);padding-block:clamp(1.5rem,2.5vw,2rem);border-top:1px solid var(--c-border-l);">
+  <section class="lojas-online-section" aria-label="Lojas Online" data-indicator="Lojas" style="background:var(--c-cream-2);padding-block:clamp(1.5rem,2.5vw,2rem);border-top:1px solid var(--c-border-l);">
     <div class="container" style="display:flex;flex-direction:column;align-items:center;gap:1.5rem;text-align:center;">
       <h2 class="section-title-md" style="color:var(--c-dark);">Lojas Online</h2>
       <div class="lojas-grid">
         <a href="#" target="_blank" rel="noopener" class="loja-card" aria-label="Amazon">
-          <span class="loja-card-name">Amazon</span>
+          <span class="loja-card-mark">
+            <img src="assets/images/parceiros/14018561-logotipo-da-amazon-em-fundo-transparente-gratis-vetor.jpg" alt="Amazon" loading="lazy" />
+          </span>
           <span class="loja-card-cta">Comprar ↗</span>
         </a>
         <a href="#" target="_blank" rel="noopener" class="loja-card" aria-label="Mercado Livre">
-          <span class="loja-card-name">Mercado Livre</span>
+          <span class="loja-card-mark">
+            <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="ml-bg" cx="50%" cy="38%" r="55%">
+                  <stop offset="0%" stop-color="#FFE600"/>
+                  <stop offset="100%" stop-color="#FFCB05"/>
+                </radialGradient>
+              </defs>
+              <ellipse cx="110" cy="40" rx="92" ry="32" fill="url(#ml-bg)"/>
+              <path d="M58 45 Q 75 26 92 42 Q 110 58 128 42 Q 145 26 162 45" stroke="#2D3277" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="92" cy="42" r="4" fill="#2D3277"/>
+              <circle cx="128" cy="42" r="4" fill="#2D3277"/>
+              <text x="110" y="92" font-family="Montserrat, system-ui, sans-serif" font-size="16" font-weight="800" fill="#2D3277" text-anchor="middle" letter-spacing="0.04em">MERCADO LIVRE</text>
+            </svg>
+          </span>
           <span class="loja-card-cta">Comprar ↗</span>
         </a>
         <a href="https://loja.phytonatus.com.br/" target="_blank" rel="noopener" class="loja-card" aria-label="Loja Phytonatus">
-          <span class="loja-card-name">Loja Phytonatus</span>
+          <span class="loja-card-mark">
+            <img src="assets/images/Logos%20e%20Selos/logo-phytonatus-institucional.png" alt="Phytonatus" loading="lazy" />
+          </span>
           <span class="loja-card-cta">Comprar ↗</span>
         </a>
       </div>
@@ -284,7 +376,7 @@
   </section>
 
   <!-- ═══ MINI FORM CONTATO ═══════════════════════════════ -->
-  <div class="footer-contact-section">
+  <div class="footer-contact-section" data-indicator="Contato">
     <div class="footer-contact-inner">
       <div class="footer-contact-info">
         <div class="section-eyebrow" style="color:var(--c-accent);">Fale conosco</div>
@@ -380,6 +472,11 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <!-- Motion architecture (R5) -->
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar"></div></div>
+  <nav class="section-indicators" aria-label="Navegação por seção"></nav>
+  <div class="page-curtain" aria-hidden="true"><span class="curtain-mark">Phytonatus</span></div>
+
 </body>
 
 </html>

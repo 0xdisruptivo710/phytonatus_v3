@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="page-light">
+<body class="page-light has-topbar">
 
     <div id="cursor" class="cursor"></div>
     <div id="cursor-dot" class="cursor-dot"></div>
@@ -19,6 +19,24 @@
             <img src="assets/images/Logos%20e%20Selos/logo-phytonatus-institucional.png" alt="Phytonatus" class="preloader-logo-img" />
             <div class="preloader-line"></div>
         </div>
+    </div>
+
+    <div class="header-topbar" aria-label="Atalhos institucionais">
+      <div class="header-topbar-inner">
+        <div class="header-topbar-left">
+          <span class="header-topbar-sac"><strong>SAC</strong>(15) 3416-1170</span>
+          <span class="header-topbar-sep" aria-hidden="true"></span>
+          <a href="mailto:contato@phytonatus.com.br" aria-label="E-mail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contato@phytonatus.com.br
+          </a>
+        </div>
+        <div class="header-topbar-right">
+          <a href="https://www.instagram.com/phytonatus/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/phytonatus/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="http://www.youtube.com/channel/UCMi3C9o_hySFlxIveNttSZA" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+        </div>
+      </div>
     </div>
 
     <header id="header">
@@ -33,6 +51,9 @@
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
+            <a href="https://loja.phytonatus.com.br/" target="_blank" rel="noopener" class="nav-shop-cta" aria-label="Loja Phytonatus">
+              Loja Online <span class="nav-shop-cta-arrow" aria-hidden="true">↗</span>
+            </a>
             <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </header>
@@ -42,6 +63,7 @@
         <a href="marcas.html">Marcas</a>
         <a href="private-label.html">Private Label</a>
         <a href="contato.html">Contato</a>
+        <a href="https://loja.phytonatus.com.br/" target="_blank" rel="noopener" class="m-shop">Loja Online ↗</a>
     </nav>
 
     <!-- HERO -->
@@ -67,183 +89,118 @@
       </svg>
     </div>
 
-    <!-- ═══ EMPÓRIO DO MEL ══════════════════════════════════ -->
-    <article id="emporio-mel" class="brand-block-full brand-tone-mel">
-        <div class="brand-block-img" style="background:var(--c-cream-2);">
-            <img src="assets/images/Gemini_Generated_Image_vujvx2vujvx2vujv.png" alt="Empório do Mel — méis por florada, laranjeira, eucalipto, flores do campo, assa-peixe" loading="eager" style="object-fit:cover;" />
-        </div>
-        <div class="brand-block-info light">
-            <img src="assets/images/Logos%20e%20Selos/logo-emporio-mel-novo.png" alt="Logo Empório do Mel" class="brand-logo-lg" loading="lazy" />
-            <p class="brand-block-name">Empório do Mel</p>
-            <p class="brand-block-tagline" style="color:var(--c-mel-marrom);">Variedade e pureza em cada florada.</p>
-            <p class="brand-block-text" style="color:var(--c-muted-l);">
-                Nossa linha premium oferece méis selecionados por floradas — laranjeira, eucalipto, flores do campo e assa-peixe — além de extrato de própolis, spray de própolis e versões especiais de méis compostos, garantindo sabor, qualidade e pureza.
-            </p>
-            <div class="brand-block-products">
-                <span class="product-chip" style="color:var(--c-mel-marrom);">Mel Flores do Campo</span>
-                <span class="product-chip" style="color:var(--c-mel-marrom);">Mel Flores de Laranjeira</span>
-                <span class="product-chip" style="color:var(--c-mel-marrom);">Mel Flores de Eucalipto</span>
-                <span class="product-chip" style="color:var(--c-mel-marrom);">Mel Flores de Assa-Peixe</span>
-                <span class="product-chip" style="color:var(--c-mel-marrom);">Spray Extrato de Própolis com Mel</span>
-                <span class="product-chip" style="color:var(--c-mel-marrom);">Mel Sachê</span>
-                <span class="product-chip" style="color:var(--c-mel-marrom);">Mel Composto</span>
-            </div>
-            <div class="brand-block-actions">
-                <a href="#" class="btn btn-dark" aria-label="Baixar Tabela Nutricional Empório do Mel">Tabela Nutricional <span class="btn-arrow">↓</span></a>
-            </div>
-        </div>
-    </article>
+    <!-- ═══ MARCAS — HORIZONTAL SCROLL PINADO ════════════════════════════════ -->
+    <section class="scenes-horizontal" aria-label="Marcas Phytonatus">
+      <div class="scenes-horizontal-track">
 
-    <div class="wave-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,80 L0,80 Z" fill="var(--c-cream-2)"/>
-      </svg>
-    </div>
-
-    <!-- ═══ EMPÓRIO NUTS ═════════════════════════════════════ -->
-    <article id="emporio-nuts" class="brand-block-full reverse brand-tone-nuts">
-        <div class="brand-block-img" style="background:var(--c-cream-2);">
-            <img src="assets/images/Gemini_Generated_Image_th2ucfth2ucfth2u.png" alt="Empório Nuts — sal rosa do Himalaia, cacau em pó, óleo de coco, farinha e açúcar de coco, temperos, cookies sem glúten" loading="lazy" style="object-fit:cover;" />
-        </div>
-        <div class="brand-block-info light">
-            <img src="assets/images/Logos%20e%20Selos/logo-emporio-nuts-novo.png" alt="Logo Empório Nuts" class="brand-logo-lg brand-logo-nuts" loading="lazy" />
-            <p class="brand-block-name">Empório Nuts</p>
-            <p class="brand-block-tagline" style="color:var(--c-nuts-vermelho);">Pureza que transforma suas receitas.</p>
-            <p class="brand-block-text" style="color:var(--c-muted-l);">
-                Produtos naturais feitos com ingredientes selecionados: sal rosa do Himalaia, cacau 100% e 50%, óleo de coco, açúcar e farinha de coco, temperos, pimentas e cookies sem glúten — tudo para preparar receitas deliciosas e saudáveis.
-            </p>
-            <div class="brand-block-products">
-                <span class="product-chip" style="color:var(--c-nuts-vermelho);">Sal Rosa do Himalaia</span>
-                <span class="product-chip" style="color:var(--c-nuts-vermelho);">Derivados de coco</span>
-                <span class="product-chip" style="color:var(--c-nuts-vermelho);">Cacau em pó</span>
-                <span class="product-chip" style="color:var(--c-nuts-vermelho);">Cookies sem glúten</span>
-                <span class="product-chip" style="color:var(--c-nuts-vermelho);">Temperos</span>
+        <article class="scene-h theme-mel" id="emporio-mel" data-bg-letter="M" data-indicator="Empório Mel">
+          <div class="scene-h-grid">
+            <div class="scene-h-art">
+              <img src="assets/images/Gemini_Generated_Image_vujvx2vujvx2vujv.png" alt="Empório do Mel" loading="eager" />
             </div>
-            <div class="brand-block-actions">
-                <a href="#" class="btn btn-dark" aria-label="Baixar Tabela Nutricional Empório Nuts">Tabela Nutricional <span class="btn-arrow">↓</span></a>
+            <div class="scene-h-text">
+              <div class="scene-h-counter">01<span class="total">/ 04</span></div>
+              <img class="scene-h-logo" src="assets/images/Logos%20e%20Selos/logo-emporio-mel-novo.png" alt="Logo Empório do Mel" loading="lazy" />
+              <p class="scene-h-tagline">Variedade e pureza em cada florada.</p>
+              <p class="scene-h-body">
+                Nossa linha premium oferece méis selecionados por floradas — laranjeira, eucalipto, flores do campo e assa‑peixe — além de extrato de própolis, spray de própolis e versões especiais de méis compostos.
+              </p>
+              <div class="scene-h-chips">
+                <span class="product-chip">Mel Flores do Campo</span>
+                <span class="product-chip">Laranjeira</span>
+                <span class="product-chip">Eucalipto</span>
+                <span class="product-chip">Assa-Peixe</span>
+                <span class="product-chip">Spray Própolis</span>
+                <span class="product-chip">Mel Sachê</span>
+              </div>
+              <div style="margin-top:1rem;">
+                <a href="#" class="btn btn-light magnetic" aria-label="Baixar Tabela Nutricional Empório do Mel">Tabela Nutricional <span class="btn-arrow">↓</span></a>
+              </div>
             </div>
-        </div>
-    </article>
+          </div>
+        </article>
 
-    <div class="wave-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,80 L0,80 Z" fill="var(--c-cream-2)"/>
-      </svg>
-    </div>
+        <article class="scene-h theme-nuts reverse" id="emporio-nuts" data-bg-letter="N" data-indicator="Empório Nuts">
+          <div class="scene-h-grid">
+            <div class="scene-h-art">
+              <img src="assets/images/Gemini_Generated_Image_th2ucfth2ucfth2u.png" alt="Empório Nuts" loading="lazy" />
+            </div>
+            <div class="scene-h-text">
+              <div class="scene-h-counter">02<span class="total">/ 04</span></div>
+              <img class="scene-h-logo" src="assets/images/Logos%20e%20Selos/logo-emporio-nuts-novo.png" alt="Logo Empório Nuts" loading="lazy" />
+              <p class="scene-h-tagline">Pureza que transforma suas receitas.</p>
+              <p class="scene-h-body">
+                Produtos naturais feitos com ingredientes selecionados: sal rosa do Himalaia, cacau 100% e 50%, óleo de coco, açúcar e farinha de coco, temperos, pimentas e cookies sem glúten.
+              </p>
+              <div class="scene-h-chips">
+                <span class="product-chip">Sal Rosa</span>
+                <span class="product-chip">Derivados de Coco</span>
+                <span class="product-chip">Cacau em Pó</span>
+                <span class="product-chip">Temperos Naturais</span>
+                <span class="product-chip">Cookies Sem Glúten</span>
+              </div>
+              <div style="margin-top:1rem;">
+                <a href="#" class="btn btn-light magnetic" aria-label="Baixar Tabela Nutricional Empório Nuts">Tabela Nutricional <span class="btn-arrow">↓</span></a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-    <!-- ═══ PHYTONATUS ═══════════════════════════════════════ -->
-    <article id="phytonatus" class="brand-block-full brand-tone-phyto">
-        <div class="brand-block-img" style="background:var(--c-cream-2);">
-            <img src="assets/images/Gemini_Generated_Image_gznhxagznhxagznh.png" alt="Phytonatus — Bisnagas de Mel Puro e Saudável" loading="lazy" style="object-fit:cover;" />
-        </div>
-        <div class="brand-block-info light">
-            <img src="assets/images/Logos%20e%20Selos/logo-phytonatus-apicultor.png" alt="Logo Phytonatus Apicultor" class="brand-logo-lg brand-logo-apicultor" loading="lazy" />
-            <p class="brand-block-name">Phytonatus</p>
-            <p class="brand-block-tagline" style="color:var(--c-phyto-apicultor);">O mel que vai do campo direto para a sua mesa.</p>
-            <p class="brand-block-text" style="color:var(--c-muted-l);">
+        <article class="scene-h theme-phyto" id="phytonatus" data-bg-letter="P" data-indicator="Phytonatus">
+          <div class="scene-h-grid">
+            <div class="scene-h-art">
+              <img src="assets/images/Gemini_Generated_Image_gznhxagznhxagznh.png" alt="Phytonatus" loading="lazy" />
+            </div>
+            <div class="scene-h-text">
+              <div class="scene-h-counter">03<span class="total">/ 04</span></div>
+              <img class="scene-h-logo" src="assets/images/Logos%20e%20Selos/logo-phytonatus-apicultor.png" alt="Logo Phytonatus" loading="lazy" />
+              <p class="scene-h-tagline">O mel que vai do campo direto para a sua mesa.</p>
+              <p class="scene-h-body">
                 A marca que deu origem ao grupo Phytonatus é referência em pureza e praticidade. Nossa bisnaga é tradicional nas gôndolas, leva o sabor e os benefícios do campo direto para a mesa das famílias brasileiras.
-            </p>
-            <div class="brand-block-products">
-                <span class="product-chip" style="color:var(--c-phyto-apicultor);">Bisnaga de Mel</span>
-                <span class="product-chip" style="color:var(--c-phyto-apicultor);">Flores do Campo</span>
-                <span class="product-chip" style="color:var(--c-phyto-apicultor);">Linha Apícola</span>
+              </p>
+              <div class="scene-h-chips">
+                <span class="product-chip">Bisnaga de Mel</span>
+                <span class="product-chip">Flores do Campo</span>
+                <span class="product-chip">Linha Apícola</span>
+              </div>
+              <div style="margin-top:1rem;">
+                <a href="#" class="btn btn-light magnetic" aria-label="Baixar Tabela Nutricional Phytonatus">Tabela Nutricional <span class="btn-arrow">↓</span></a>
+              </div>
             </div>
-            <div class="brand-block-actions">
-                <a href="#" class="btn btn-dark" aria-label="Baixar Tabela Nutricional Phytonatus">Tabela Nutricional <span class="btn-arrow">↓</span></a>
+          </div>
+        </article>
+
+        <article class="scene-h theme-gourmet reverse" id="vida-gourmet" data-bg-letter="V" data-indicator="Vida Gourmet">
+          <div class="scene-h-grid">
+            <div class="scene-h-art">
+              <img src="assets/images/Gemini_Generated_Image_xeblp7xeblp7xebl.png" alt="Vida Gourmet" loading="lazy" />
             </div>
-        </div>
-    </article>
-
-    <div class="wave-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,80 L0,80 Z" fill="var(--c-cream-2)"/>
-      </svg>
-    </div>
-
-    <!-- ═══ VIDA GOURMET ═════════════════════════════════════ -->
-    <article id="vida-gourmet" class="brand-block-full reverse brand-tone-gourmet">
-        <div class="brand-block-img" style="background:var(--c-cream-2);">
-            <img src="assets/images/Gemini_Generated_Image_xeblp7xeblp7xebl.png" alt="Vida Gourmet — Chimichurri Receita Tradicional Argentina com Sal Rosa do Himalaia" loading="lazy" style="object-fit:cover;" />
-        </div>
-        <div class="brand-block-info light">
-            <img src="assets/images/Logos%20e%20Selos/logo-vida-gourmet-novo.png" alt="Logo Vida Gourmet" class="brand-logo-lg" loading="lazy" />
-            <p class="brand-block-name">Vida Gourmet</p>
-            <p class="brand-block-tagline" style="color:var(--c-gourmet-vermelho);">Inspiração em cada preparo.</p>
-            <p class="brand-block-text" style="color:var(--c-muted-l);">
+            <div class="scene-h-text">
+              <div class="scene-h-counter">04<span class="total">/ 04</span></div>
+              <img class="scene-h-logo" src="assets/images/Logos%20e%20Selos/logo-vida-gourmet-novo.png" alt="Logo Vida Gourmet" loading="lazy" />
+              <p class="scene-h-tagline">Inspiração em cada preparo.</p>
+              <p class="scene-h-body">
                 Linha premium de produtos especiais, com misturas únicas que despertam a criatividade e transformam cozinhar em uma experiência saborosa e inesquecível.
-            </p>
-            <div class="brand-block-products">
-                <span class="product-chip" style="color:var(--c-gourmet-vermelho);">Chimichurri</span>
+              </p>
+              <div class="scene-h-chips">
+                <span class="product-chip">Chimichurri</span>
+              </div>
+              <div style="margin-top:1rem;">
+                <a href="#" class="btn btn-light magnetic" aria-label="Baixar Tabela Nutricional Vida Gourmet">Tabela Nutricional <span class="btn-arrow">↓</span></a>
+              </div>
             </div>
-            <div class="brand-block-actions">
-                <a href="#" class="btn btn-dark" aria-label="Baixar Tabela Nutricional Vida Gourmet">Tabela Nutricional <span class="btn-arrow">↓</span></a>
-            </div>
-        </div>
-    </article>
+          </div>
+        </article>
 
-    <div class="wave-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,40 C240,0 480,80 720,40 C960,0 1200,80 1440,40 L1440,80 L0,80 Z" fill="var(--c-cream)"/>
-      </svg>
+      </div>
+    </section>
+
+    <div class="botanical-divider" aria-hidden="true">
+      <span class="ornament"></span>
     </div>
 
     <style>
-        /* Layout enxuto + hover expansivo */
-        .brand-block-full {
-            transition: grid-template-columns .7s cubic-bezier(.2,.7,.2,1);
-            min-height: 70vh !important;
-        }
-        .brand-block-full:has(.brand-block-img:hover)  { grid-template-columns: 1.6fr 1fr; }
-        .brand-block-full:has(.brand-block-info:hover) { grid-template-columns: 1fr 1.6fr; }
-        .brand-block-full .brand-block-img img { transition: transform .9s cubic-bezier(.2,.7,.2,1) !important; }
-        .brand-block-full .brand-block-img:hover img { transform: scale(1.08) !important; }
-        .brand-block-full .brand-block-img,
-        .brand-block-full .brand-block-info { transition: flex .7s, padding .7s; }
-        /* Padding interno enxuto — pouco espaço nas bordas */
-        .brand-block-info {
-            text-align: center;
-            align-items: center;
-            padding: clamp(1.25rem,2vw,2rem) clamp(0.75rem,1.5vw,1.5rem) !important;
-        }
-        .brand-block-info > * { width: 100%; max-width: 640px; }
-        .brand-block-info .brand-block-products,
-        .brand-block-info .brand-block-actions {
-            justify-content: center;
-        }
-        /* Logos GRANDES e uniformes */
-        .brand-logo-lg {
-            width: clamp(320px, 38vw, 460px);
-            height: clamp(160px, 18vw, 220px);
-            object-fit: contain;
-            margin: 0 auto 1.5rem;
-            display: block;
-        }
-        .brand-logo-apicultor,
-        .brand-logo-nuts { width: clamp(320px, 38vw, 460px); height: clamp(160px, 18vw, 220px); aspect-ratio: auto; }
-
-        /* ── Gradientes seguindo o padrão Phytonatus (3 stops, accent → light) ── */
-        .brand-tone-phyto .brand-block-info {
-            background: linear-gradient(180deg, var(--c-phyto-apicultor-amarelo) 0%, #FCE9A3 60%, #FFF6DC 100%);
-        }
-        .brand-tone-phyto .brand-block-name,
-        .brand-tone-phyto .brand-block-text { color: var(--c-phyto-apicultor) !important; }
-        .brand-tone-mel .brand-block-info {
-            background: linear-gradient(180deg, var(--c-mel-amarelo-2) 0%, var(--c-mel-amarelo-1) 60%, #FFF8C5 100%);
-        }
-        .brand-tone-mel .brand-block-name,
-        .brand-tone-mel .brand-block-text { color: var(--c-mel-marrom) !important; }
-        .brand-tone-nuts .brand-block-info {
-            background: linear-gradient(180deg, var(--c-nuts-bege-2) 0%, var(--c-nuts-bege-1) 60%, #F5EFDC 100%);
-        }
-        .brand-tone-nuts .brand-block-name,
-        .brand-tone-nuts .brand-block-text { color: var(--c-nuts-marrom) !important; }
-        .brand-tone-gourmet .brand-block-info {
-            background: linear-gradient(180deg, var(--c-gourmet-bege-2) 0%, var(--c-gourmet-bege-1) 60%, #FAF3DD 100%);
-        }
-        .brand-tone-gourmet .brand-block-name,
-        .brand-tone-gourmet .brand-block-text { color: var(--c-gourmet-vermelho) !important; }
-
-        /* ── Botão Tabela Nutricional na cor de cada marca ── */
+        /* Botão Tabela Nutricional — cor por marca (overlay nas cenas) */
         .brand-tone-mel .btn-dark {
             background: var(--c-mel-marrom); color: #fff; border-color: var(--c-mel-marrom);
         }
@@ -267,36 +224,6 @@
         }
         .brand-tone-gourmet .btn-dark:hover {
             background: transparent; color: var(--c-gourmet-vermelho); border-color: var(--c-gourmet-vermelho);
-        }
-        .brand-parent-badge {
-            width: clamp(120px, 13vw, 160px);
-            height: auto;
-            opacity: 0.72;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        .brand-parent-badge:hover { opacity: 1; transition: opacity .25s ease; }
-        .brand-block-name {
-            font-family: var(--f-title);
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--c-muted-l);
-            margin-bottom: 1rem;
-        }
-        .brand-block-tagline {
-            font-family: var(--f-title);
-            font-size: clamp(1.4rem, 2.6vw, 2rem);
-            font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-        .brand-block-img img {
-            object-fit: cover;
-        }
-        @media(max-width:960px) {
-            .brand-block-img { aspect-ratio: 4/3; min-height: 360px; }
         }
     </style>
 
@@ -405,6 +332,11 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+  <!-- Motion architecture (R5) -->
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar"></div></div>
+  <nav class="section-indicators" aria-label="Navegação por seção"></nav>
+  <div class="page-curtain" aria-hidden="true"><span class="curtain-mark">Phytonatus</span></div>
 
 </body>
 

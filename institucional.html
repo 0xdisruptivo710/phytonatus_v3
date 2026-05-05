@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="page-light">
+<body class="page-light has-topbar">
 
     <div id="cursor" class="cursor"></div>
     <div id="cursor-dot" class="cursor-dot"></div>
@@ -25,6 +25,25 @@
     </div>
 
     <!-- HEADER DIRTY FIX TO AVOID ID CONFLITS LATER: copy exactly from updated -->
+    <div class="header-topbar" aria-label="Atalhos institucionais">
+      <div class="header-topbar-inner">
+        <div class="header-topbar-left">
+          <span class="header-topbar-sac"><strong>SAC</strong>(15) 3416-1170</span>
+          <span class="header-topbar-sep" aria-hidden="true"></span>
+          <a href="mailto:contato@phytonatus.com.br" aria-label="E-mail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            contato@phytonatus.com.br
+          </a>
+        </div>
+        <div class="header-topbar-right">
+          <a href="https://www.instagram.com/phytonatus/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/phytonatus/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="http://www.youtube.com/channel/UCMi3C9o_hySFlxIveNttSZA" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+
     <header id="header">
         <div class="header-inner">
             <a href="index.html" class="logo logo-img"><img src="assets/images/Logos%20e%20Selos/logo-phytonatus-institucional.png" alt="Phytonatus" /></a>
@@ -37,6 +56,9 @@
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
+      <a href="https://loja.phytonatus.com.br/" target="_blank" rel="noopener" class="nav-shop-cta" aria-label="Loja Phytonatus">
+        Loja Online <span class="nav-shop-cta-arrow" aria-hidden="true">↗</span>
+      </a>
             <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </header>
@@ -46,10 +68,11 @@
         <a href="marcas.html">Marcas</a>
         <a href="private-label.html">Private Label</a>
         <a href="contato.html">Contato</a>
+        <a href="https://loja.phytonatus.com.br/" target="_blank" rel="noopener" class="m-shop">Loja Online ↗</a>
     </nav>
 
     <!-- HERO -->
-    <section class="hero grain" style="min-height:75vh;background-image:url('assets/images/side-view-woman-working-beer-factory.jpg');background-size:cover;background-position:center;" aria-label="Apresentação Institucional">
+    <section class="hero grain" data-indicator="Institucional" style="min-height:75vh;background-image:url('assets/images/side-view-woman-working-beer-factory.jpg');background-size:cover;background-position:center;" aria-label="Apresentação Institucional">
         <div class="hero-content">
             <h1 class="hero-title">
                 <span class="reveal"><span class="reveal-inner">Conheça a</span></span>
@@ -182,12 +205,16 @@
       </svg>
     </div>
 
+    <div class="botanical-divider" aria-hidden="true">
+      <span class="ornament bee"></span>
+    </div>
+
     <!-- CERTIFICAÇÕES -->
     <section style="background:var(--c-cream);" class="s-pad">
         <div class="container">
             <div style="text-align:center;margin-bottom:3rem;display:flex;flex-direction:column;align-items:center;">
                 <div class="section-eyebrow" style="justify-content:center;">Certificações</div>
-                <h2 class="section-title-md fade-in">Selos de Certificação</h2>
+                <h2 class="section-title-md fade-in">Padrões internacionais de qualidade</h2>
             </div>
 
             <div class="certs-grid fade-in">
@@ -203,8 +230,8 @@
 
                 <!-- FDA -->
                 <div class="cert-card" aria-label="FDA Registered">
-                    <div class="cert-card-img cert-card-img-placeholder">
-                        <span>FDA</span>
+                    <div class="cert-card-img">
+                        <img src="assets/images/Logos%20e%20Selos/selo_1.png" alt="Selo FDA Registered" loading="lazy" />
                     </div>
                     <h3 class="cert-card-title">FDA Registered</h3>
                     <p class="cert-card-sub">Food and Drug Administration</p>
@@ -213,8 +240,8 @@
 
                 <!-- BPF -->
                 <div class="cert-card" aria-label="BPF">
-                    <div class="cert-card-img cert-card-img-placeholder">
-                        <span>BPF</span>
+                    <div class="cert-card-img">
+                        <img src="assets/images/Logos%20e%20Selos/selo_2.png" alt="Selo BPF" loading="lazy" />
                     </div>
                     <h3 class="cert-card-title">BPF</h3>
                     <p class="cert-card-sub">Boas Práticas de Fabricação</p>
@@ -224,7 +251,7 @@
                 <!-- APPCC / HACCP -->
                 <div class="cert-card" aria-label="APPCC">
                     <div class="cert-card-img">
-                        <img src="assets/images/Logos%20e%20Selos/HACCP.jpeg" alt="Certificação APPCC / HACCP" loading="lazy" />
+                        <img src="assets/images/Logos%20e%20Selos/selo_3.png" alt="Certificação APPCC / HACCP" loading="lazy" />
                     </div>
                     <h3 class="cert-card-title">APPCC</h3>
                     <p class="cert-card-sub">Análise de Perigos e Pontos Críticos de Controle</p>
@@ -244,18 +271,17 @@
             display: flex; flex-direction: column; align-items: center;
             gap: 0.75rem; text-align: center;
             padding: 2rem 1.25rem;
-            background: var(--c-cream-2);
-            border: 1px solid var(--c-border-l);
-            border-radius: 10px;
-            transition: border-color 0.2s, transform 0.2s;
+            background: transparent;
+            border: none;
+            transition: transform 0.2s;
         }
-        .cert-card:hover { border-color: var(--c-accent); transform: translateY(-4px); }
+        .cert-card:hover { transform: translateY(-4px); }
         .cert-card-img {
             width: 88px; height: 88px;
             display: flex; align-items: center; justify-content: center;
             margin-bottom: 0.4rem;
         }
-        .cert-card-img img { width: 100%; height: 100%; object-fit: contain; }
+        .cert-card-img img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
         .cert-card-img-placeholder {
             border: 1.5px dashed var(--c-border-l);
             border-radius: 50%;
@@ -390,5 +416,10 @@
             }
         });
     </script>
+  <!-- Motion architecture (R5) -->
+  <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress-bar"></div></div>
+  <nav class="section-indicators" aria-label="Navegação por seção"></nav>
+  <div class="page-curtain" aria-hidden="true"><span class="curtain-mark">Phytonatus</span></div>
+
 </body>
 </html>

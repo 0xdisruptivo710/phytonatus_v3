@@ -1,0 +1,23 @@
+# Arquivos internos / briefing / referências (não fazem parte do site)
+briefing-site-2026-04-24/
+ui-ux-pro-max-skill-main/
+LOGO CLIENTES/
+*.docx
+image.png
+MEDIDAS-IMAGENS.md
+melbras-dna-design-system.md
+
+# Vídeo bruto (já copiado em assets/images/hero-institucional.mp4)
+2fb97f80f9a8458587a6b28a3d5b8a65*.mp4
+
+# Builds e helpers temporários
+_apply_*.mjs
+_inject_*.mjs
+_replace_*.mjs
+
+# Sistema
+.DS_Store
+Thumbs.db
+*.log
+.env*
+node_modules/
