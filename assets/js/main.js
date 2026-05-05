@@ -502,9 +502,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Reveal staged dentro de cada scene-h conforme entra
-        sceneItems.forEach(scene => {
+        // (a primeira cena já está em viewport no load — animar imediatamente)
+        sceneItems.forEach((scene, idx) => {
             const els = scene.querySelectorAll('.scene-h-counter, .scene-h-logo, .scene-h-tagline, .scene-h-body, .scene-h-chips, .btn');
             gsap.set(els, { opacity: 0, y: 40 });
+
+            if (idx === 0) {
+                // Cena 01: dispara no load com pequeno delay pós-preloader
+                gsap.to(els, {
+                    opacity: 1, y: 0,
+                    duration: 0.95, stagger: 0.08, ease: 'expo.out',
+                    delay: 1.0
+                });
+            }
+
+            // Cenas seguintes (e refresh visual da primeira em onEnterBack) via ScrollTrigger
             ScrollTrigger.create({
                 trigger: scene,
                 containerAnimation: ScrollTrigger.getAll().find(t => t.vars.trigger === horizSection),
@@ -512,10 +524,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 end: 'right center',
                 onEnter: () => gsap.to(els, { opacity: 1, y: 0, duration: 0.85, stagger: 0.07, ease: 'expo.out' }),
                 onEnterBack: () => gsap.to(els, { opacity: 1, y: 0, duration: 0.85, stagger: 0.07, ease: 'expo.out' }),
-                onLeave: () => gsap.to(els, { opacity: 0.3, duration: 0.4 }),
-                onLeaveBack: () => gsap.to(els, { opacity: 0.3, duration: 0.4 })
+                onLeave: () => gsap.to(els, { opacity: 0.35, duration: 0.4 }),
+                onLeaveBack: () => gsap.to(els, { opacity: 0.35, duration: 0.4 })
             });
         });
+    } else if (horizSection && horizTrack && window.innerWidth <= 960) {
+        // Mobile: scroll vertical empilhado, garantir tudo visível imediatamente
+        horizTrack.querySelectorAll('.scene-h-counter, .scene-h-logo, .scene-h-tagline, .scene-h-body, .scene-h-chips, .btn')
+            .forEach(el => { el.style.opacity = '1'; });
     }
 
     // ── R2: Marcas — REAL GSAP PIN (cada cena pinada) ──────
