@@ -36,25 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (isTouch && cursor) cursor.style.display = 'none';
 
-    if (cursor && !isTouch) {
-        let cx = window.innerWidth / 2, cy = window.innerHeight / 2;
-        let lastTrailX = cx, lastTrailY = cy;
-        let trailLayer = null;
-        if (!reduceMotion) {
-            trailLayer = document.createElement('div');
-            trailLayer.className = 'cursor-trail-layer';
-            document.body.appendChild(trailLayer);
-        }
-
-        window.addEventListener('mousemove', e => {
-            cx = e.clientX; cy = e.clientY;
-            if (!trailLayer) return;
-            const dx = cx - lastTrailX, dy = cy - lastTrailY;
-            if (dx * dx + dy * dy > 4500) {
-                spawnTrailDot(cx, cy);
-                lastTrailX = cx; lastTrailY = cy;
-            }
-        }, { passive: true });
+    // Trail dourado segue o cursor (independente de qualquer abelha)
+    let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+    if (!isTouch && !reduceMotion) {
+        let lastTrailX = mouseX, lastTrailY = mouseY;
+        const trailLayer = document.createElement('div');
+        trailLayer.className = 'cursor-trail-layer';
+        document.body.appendChild(trailLayer);
 
         function spawnTrailDot(x, y) {
             const dot = document.createElement('span');
@@ -63,23 +51,18 @@ document.addEventListener('DOMContentLoaded', () => {
             dot.style.top = y + 'px';
             trailLayer.appendChild(dot);
             requestAnimationFrame(() => dot.classList.add('fade'));
-            setTimeout(() => dot.remove(), 900);
+            setTimeout(() => dot.remove(), 1100);
         }
 
-        (function animateCursor() {
-            const rect = cursor.getBoundingClientRect();
-            const curX = rect.left + rect.width / 2;
-            const curY = rect.top + rect.height / 2;
-            const x = curX + (cx - curX) * 0.18;
-            const y = curY + (cy - curY) * 0.18;
-            cursor.style.left = x + 'px';
-            cursor.style.top  = y + 'px';
-            requestAnimationFrame(animateCursor);
-        })();
-        document.querySelectorAll('a, button, [data-hover]').forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-        });
+        window.addEventListener('mousemove', e => {
+            mouseX = e.clientX; mouseY = e.clientY;
+            const dx = mouseX - lastTrailX, dy = mouseY - lastTrailY;
+            // threshold menor (24² = 576) → bem mais dots por movimento
+            if (dx * dx + dy * dy > 576) {
+                spawnTrailDot(mouseX, mouseY);
+                lastTrailX = mouseX; lastTrailY = mouseY;
+            }
+        }, { passive: true });
     }
 
     // ── Header behaviors ──────────────────────────────────
@@ -619,13 +602,13 @@ document.addEventListener('DOMContentLoaded', () => {
         let mx = bx, my = by;
         window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; }, { passive: true });
         (function flyBee() {
-            // segue com lag maior que o cursor (sensação de mascote)
-            bx += (mx + 60 - bx) * 0.04;
-            by += (my - 80 - by) * 0.04;
+            // segue de pertinho do cursor com leve lag — dá vida sem se distanciar
+            bx += (mx + 22 - bx) * 0.18;
+            by += (my - 26 - by) * 0.18;
             const dx = bx - lx, dy = by - ly;
             const angle = Math.atan2(dy, dx) * (180 / Math.PI);
             lx = bx; ly = by;
-            bee.style.transform = `translate(${bx - 28}px, ${by - 28}px) rotate(${angle * 0.4}deg)`;
+            bee.style.transform = `translate(${bx - 22}px, ${by - 22}px) rotate(${angle * 0.35}deg)`;
             requestAnimationFrame(flyBee);
         })();
     }
